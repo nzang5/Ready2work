@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Frontpage from './pages/frontpage';
 import Login from './pages/login';
 import Signup from './pages/signup';
+import JobSearch from './pages/JobSearch';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Navbar/>
       <Routes>
           <Route path="/" element={<Frontpage />} />
+          <Route path="/jobsearch" element={<JobSearch />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
       </Routes>
