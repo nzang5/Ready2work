@@ -1,15 +1,15 @@
 import React from "react";
 
 
-function Signin(){
+function Login(){
 
 
 
     return(
         <div>
-            <h1>Sign in page</h1>
+            <h1>Log-in page</h1>
         </div>
     )
 }
 
-export default Signin;
+export default Login;
