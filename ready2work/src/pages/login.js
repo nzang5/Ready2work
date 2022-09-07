@@ -85,8 +85,8 @@ function Login() {
             <Grid container>
               
               <Grid item>
-                <Link href="#" variant="body2">
-                  {"Don't have an account? Sign up!! 🙌"}
+                <Link href="/signup" variant="body2">
+                  {"Don't have an account yet? Sign up!! 🙌"}
                 </Link>
               </Grid>
             </Grid>
