@@ -25,15 +25,18 @@ function JobSearch(){
         .catch(function (error) {
             console.error(error);
         },[]);
+      
+        console.log(jobs)
  
     })
 
     return(
         <div>
             <h1>Job Search page</h1>
-      </div>
-    )
-    
+           
+
+        </div>
+        )
 }
 
 export default JobSearch;
