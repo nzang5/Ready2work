@@ -33,7 +33,7 @@ function JobSearch(){
     return(
         <div>
             <h1>Job Search page</h1>
-           
+           <p>{jobs}</p>
 
         </div>
         )
