@@ -1,100 +1,84 @@
-import * as React from 'react';
+// src/pages/LoginPage.js
 
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useState } from "react";
+import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from '../context/auth.context';
+import Googlebutton from '../components/Googlebutton'
+
+const API_URL = "http://localhost:5005";
 
 
+function Login(props) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState(undefined);
+  
+  const navigate = useNavigate();
+  const { storeToken, authenticateUser } = useContext(AuthContext);
 
-const theme = createTheme();
+  const handleEmail = (e) => setEmail(e.target.value);
+  const handlePassword = (e) => setPassword(e.target.value);
 
+  
+  const handleLoginSubmit = (e) => {
 
+    e.preventDefault();
+    const requestBody = { email, password };
+ 
+    axios.post(`${API_URL}/auth/login`, requestBody)
+      .then((response) => {
+      
+        console.log('JWT token', response.data.authToken );
 
-function Login() {
-
-
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    
-    
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+        storeToken(response.data.authToken);
+      
+        authenticateUser();
+        navigate('/');                             // <== ADD      
+      })
+      .catch((error) => {
+        const errorDescription = error.response.data.message;
+        setErrorMessage(errorDescription);
+      })
+      
   };
+
 
 
 
   
   return (
-    <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <Box
-          sx={{
-            marginTop: 8,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
-        >
-          
-          <h2>Login</h2>
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              autoFocus
-            />
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Login
-            </Button>
-            <Grid container>
-              
-              <Grid item>
-                <Link href="/signup" variant="body2">
-                  {"Don't have an account yet? Sign up!! 🙌"}
-                </Link>
-              </Grid>
-            </Grid>
-          </Box>
-        </Box>
-      
-      </Container>
-    </ThemeProvider>
-  );
+    <div className="LoginPage">
+    
+      <h1>Login</h1>
+
+      <form onSubmit={handleLoginSubmit}>
+        <label>Email:</label>
+        <input 
+          type="email"
+          name="email"
+          value={email}
+          onChange={handleEmail}
+        />
+
+        <label>Password:</label>
+        <input
+          type="password"
+          name="password"
+          value={password}
+          onChange={handlePassword}
+        />
+
+        <button type="submit">Login</button>
+      </form>
+      { errorMessage && <p className="error-message">{errorMessage}</p> }
+
+      <Googlebutton/>
+      <p>Don't have an account yet?</p>
+      <Link to={"/signup"}> Sign Up</Link>
+    </div>
+  )
 }
+
 export default Login;

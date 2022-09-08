@@ -15,36 +15,39 @@ const options = {
 
 
 function JobSearch(){
-    
-    const [ jobs, setJobs ] = useState();
+
+    const [ jobs, setJobs ] = useState([]);
     
     useEffect(() => {
       
         axios.request(options)
-        .then(function (response) {console.log(response.data)
+        .then(response=> 
+        {console.log(response.data)
         setJobs(response.data);})
         .catch(function (error) {
             console.error(error);
         },[]);
-      
-        console.log("Hello Nash", jobs)
  
     })
+    
 
-    return(
-        <div>
-            <h1>Job Search page</h1>
-           {jobs.map(job => {
-            console.log("Jooooobs", jobs)
-            return(
-                <div>
-                <p>{job.title}</p>
-                </div>
-            )
-           })}
+        return(
+            <div>
+                {jobs.map((jobs, index) => {
+        return (
+          <div key={index}>
+            <h2>name: {jobs.company_name}</h2>
+            <h2>country: {jobs.title}</h2>
 
-        </div>
-        )
+            <hr />
+          </div>
+        );
+      })}
+
+
+
+      </div>
+  );
 }
 
 export default JobSearch;
