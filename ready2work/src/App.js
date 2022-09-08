@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import { Routes, Route } from 'react-router-dom';
-import Frontpage from './pages/frontpage';
+import Frontpage from './pages/Frontpage';
 import Login from './pages/login';
 import Signup from './pages/signup';
 import JobSearch from './pages/JobSearch';

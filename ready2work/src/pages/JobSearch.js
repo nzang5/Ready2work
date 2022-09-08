@@ -2,6 +2,7 @@ import React from "react";
 import axios from 'axios';
 import { useState, useEffect } from "react";
 
+
 const options = {
     method: 'GET',
     url: 'https://arbeitnow-free-job-board.p.rapidapi.com/api/job-board-api',
@@ -14,7 +15,7 @@ const options = {
 
 
 function JobSearch(){
-
+    
     const [ jobs, setJobs ] = useState();
     
     useEffect(() => {
@@ -26,14 +27,21 @@ function JobSearch(){
             console.error(error);
         },[]);
       
-        console.log(jobs)
+        console.log("Hello Nash", jobs)
  
     })
 
     return(
         <div>
             <h1>Job Search page</h1>
-           
+           {jobs.map(job => {
+            console.log("Jooooobs", jobs)
+            return(
+                <div>
+                <p>{job.title}</p>
+                </div>
+            )
+           })}
 
         </div>
         )
