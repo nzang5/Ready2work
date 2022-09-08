@@ -8,6 +8,10 @@ import JobSearch from './pages/JobSearch';
 
 
 function App() {
+
+
+ 
+
   return (
     <div className="App">
   
