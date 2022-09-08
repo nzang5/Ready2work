@@ -9,37 +9,39 @@ function Navbar(){
 
     return(
         <nav>
-                <Link to="/">
+        <div className='NavDiv'>
+        <div className='elementsNav'>
+                <Link className='link' to="/">
                      Home
                  </Link>
-                 <Link to="/jobpost">
+
+                 <Link className='link' to="/jobpost">
                     Create a Job
                 </Link>
 
             {isLoggedIn && (
           <>
-                <Link to="/jobsearch">
+                <Link className='link' to="/jobsearch">
                     Job Search page
                 </Link>
 
                 
              
                 <button onClick={logOutUser}>Logout</button>
-                <h2> Welcome back {user && user.name} !!😃</h2>
+                {/*<h2> Welcome back {user && user.name} !!😃</h2>*/}
          </>    
       )}
       
             {!isLoggedIn && (
         <>    
-            <Link to="login">
-                <button>Login</button>
-            </Link>
+           <p> <Link className='link' to="login"> Login </Link> </p>
             
-            <Link to="signup">
-                <button>Sign-up</button>
-            </Link>
+           <p> <Link className='link' to="signup"> Sign-up </Link> </p>
+            
             </>
       )}
+      </div>
+      </div>
         </nav>
     )
     }
