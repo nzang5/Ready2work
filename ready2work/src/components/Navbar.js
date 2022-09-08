@@ -21,11 +21,9 @@ function Navbar(){
 
             {isLoggedIn && (
           <>
-                <Link className='link' to="/jobsearch">
-                    Job Search page
-                </Link>
+                <Link className='link' to="/jobsearch">Job Search page</Link>
 
-                
+                <p> <Link className='link' to="jobpost"> Post a Job </Link> </p>
              
                 <button onClick={logOutUser}>Logout</button>
                 {/*<h2> Welcome back {user && user.name} !!😃</h2>*/}

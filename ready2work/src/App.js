@@ -6,12 +6,15 @@ import Login from './pages/login';
 import Signup from './pages/signup';
 import JobSearch from './pages/JobSearch';
 import JobPost from './pages/JobPost';
+import axios from 'axios';
 
 
 function App() {
 
-
- 
+{/*const handdleCreateJob = ()=>{
+axios.post("http://localhost:5005/jobs/create")
+}
+handdleCreateJob()*/}
 
   return (
     <div className="App">
