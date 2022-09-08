@@ -1,7 +1,6 @@
 import React from "react";
 import Axios from 'axios';
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 
 const options = {
@@ -45,7 +44,7 @@ if(loading === true){
             <h2> {job.title}</h2>
             <h3>{job.company_name}</h3>
             <p> Location: {job.location}</p>
-             <Link to="/{job.url}">Apply here</Link>
+             <a href={job.url}>Apply Here</a>
             <p>Job description: {job.description}</p>
             
             <hr />
