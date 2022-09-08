@@ -3,14 +3,22 @@ import axios from 'axios';
 import { useState, useEffect } from "react";
 
 const options = {
-    method: 'GET',
-    url: 'https://arbeitnow-free-job-board.p.rapidapi.com/api/job-board-api',
-    headers: {
-      'Content-Type': 'application/json',
-      'X-RapidAPI-Key': '8ce0e4d62dmsh944df266a00df01p126174jsn0198eac77e75',
-      'X-RapidAPI-Host': 'arbeitnow-free-job-board.p.rapidapi.com'
-    }
-  };
+  method: 'GET',
+  url: 'https://linkupjobsearch-linkup-job-search-v1.p.rapidapi.com/developers/v-1/search-handler.js',
+  params: {
+    api_key: '{api_key}',
+    embedded_search_key: '{search_key}',
+    orig_ip: '{ip_addr}',
+    keyword: '{keyword}',
+    location: '{location}',
+    distance: '{radius}'
+  },
+  headers: {
+    Authorization: 'undefined',
+    'X-RapidAPI-Key': '8ce0e4d62dmsh944df266a00df01p126174jsn0198eac77e75',
+    'X-RapidAPI-Host': 'linkupjobsearch-linkup-job-search-v1.p.rapidapi.com'
+  }
+};
 
 
 function JobSearch(){
