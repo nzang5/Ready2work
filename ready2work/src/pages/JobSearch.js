@@ -36,15 +36,18 @@ if(loading === true){
 }
         return(
             <div>
-            <h3>List of jobs</h3>
+            <h1>List of jobs</h1>
+            <br></br>
 
                 {jobs.map((job => {
         return (
           <div>
             <h2> {job.title}</h2>
-            <h3> {job.company_name}</h3>
-            <p> {job.description}</p>
+            <h3>{job.company_name}</h3>
+            <p> Location: {job.location}</p>
              <Link to="/{job.url}">Apply here</Link>
+            <p>Job description: {job.description}</p>
+            
             <hr />
           </div>
         );
