@@ -2,6 +2,7 @@ import React from "react";
 import axios from 'axios';
 import { useState, useEffect } from "react";
 
+
 const options = {
   method: 'GET',
   url: 'https://linkupjobsearch-linkup-job-search-v1.p.rapidapi.com/developers/v-1/search-handler.js',
@@ -34,8 +35,6 @@ function JobSearch(){
         .catch(function (error) {
             console.error(error);
         },[]);
-      
-      
  
     })
     

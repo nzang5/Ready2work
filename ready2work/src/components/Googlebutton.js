@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import React from 'react';
-import jtw_decode from 'jwt-decode'
+import jtw_decode from 'jwt-decode';
 
 
 function Googlebutton(){
