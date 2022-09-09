@@ -1,21 +1,38 @@
+/*NavBar*/
 .NavDiv{
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
   align-items: center;
   padding-bottom: 10px;
   padding-top: 10px;
-  border-bottom: 2px solid grey;
+  border-bottom: 2px solid rgb(187, 184, 184);
   padding-right: 50px;
   padding-left: 50px;
+  background-color: white;
 }
 .elementsNav{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width:25%
+  width:40%
 }
 .link{
   text-decoration: none;
   color: black;
   font-size: 20px;
 }
+.LogOutBtn{
+  text-decoration: none;
+  background-color: white;
+  border: 0px;
+  color: black;
+  font-size: 20px;
+}
+.logoDiv{
+  text-align: left;
+}
+.logo{
+  width: 100px;
+}
+/*BODY*/
+

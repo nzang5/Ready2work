@@ -4,10 +4,11 @@ import { useState } from "react";
 
  
 function JobPost() {
-  const [setJobs] = useState([]);
+  const [jobs, setJobs] = useState([]);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [companyName, setCompanyName] = useState("");
+  const API = "http://localhost:5005/jobs/create";
 
   const handleTitle = e => setTitle(e.target.value);
  
@@ -19,7 +20,7 @@ function JobPost() {
         e.preventDefault();
         
     axios
-      .post("http://localhost:5005/jobs/create", {title, description, companyName})
+      .post(API, {title, description, companyName})
       .then((response) => {
         console.log('response.data', response.data);
         setJobs(response.data)
@@ -29,9 +30,6 @@ function JobPost() {
 
   return (
     <div>
-      <h3>List of Jobs</h3>
- 
-      return (
     <div className="JobPostPage">
     
       <h1>Post your job</h1>
@@ -64,10 +62,13 @@ function JobPost() {
       </form>
      
     </div>
-  )
+    <div>
       
     </div>
+    </div>
+
   );
 }
+
 
 export default JobPost;

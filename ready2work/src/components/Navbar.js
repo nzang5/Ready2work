@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useContext } from "react"; 
 import { AuthContext } from "../context/auth.context";
+import logo from "./Ready work (1)-CutOut.png"
 
 function Navbar(){
 
@@ -10,14 +11,14 @@ function Navbar(){
     return(
         <nav>
         <div className='NavDiv'>
+        <div className='logoDiv'>
+        <img className='logo' src={logo}></img>
+        </div>
         <div className='elementsNav'>
+
                 <Link className='link' to="/">
                      Home
                  </Link>
-
-                 <Link className='link' to="/jobpost">
-                    Create a Job
-                </Link>
 
             {isLoggedIn && (
           <>
@@ -25,7 +26,7 @@ function Navbar(){
 
                 <p> <Link className='link' to="jobpost"> Post a Job </Link> </p>
              
-                <button onClick={logOutUser}>Logout</button>
+                <Link className='link' to="/"><button className='LogOutBtn' onClick={logOutUser}>Logout</button></Link>
                 {/*<h2> Welcome back {user && user.name} !!😃</h2>*/}
          </>    
       )}
