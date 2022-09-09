@@ -22,14 +22,19 @@ function JobSearch(){
     
     
     useEffect(() => {
-      Axios.request(options)
-      .then((response) => {
-        console.log(response.data.data);
-      const apiData = response.data.data;
-      setJobs(apiData);
-      setLoading(false)
-      })
-      .catch((err) => console.log(err));
+      async function getAllJobs(){
+        try{
+        let apiData = await Axios.request(options)
+        let dbData = await Axios.get("http://localhost:5005/jobs/jobsList")
+        console.log("db data", dbData )
+        let allData = [...dbData.data, ...apiData.data.data]
+        setJobs(allData)
+        setLoading(false)}
+       catch(err){console.log(err)}
+      }
+      getAllJobs()
+      
+
     }, []);
     
 if(loading === true){

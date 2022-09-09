@@ -13,7 +13,7 @@ function Navbar(){
         <nav>
         <div className='NavDiv'>
         <div className='logoDiv'>
-        <img className='logo' src={logo}></img>
+        <img className='logo' alt="logo" src={logo}></img>
         </div>
         <div className='elementsNav'>
 

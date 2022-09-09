@@ -4,7 +4,7 @@ import { useState } from "react";
 
  
 function JobPost(props) {
-  const [setJobs] = useState([]);
+  const [ jobs, setJobs] = useState([]);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [companyName, setCompanyName] = useState("");
@@ -21,12 +21,9 @@ function JobPost(props) {
       .post(API, {title, description, companyName})
       .then((response) => {
         console.log('response.data', response.data);
-        setJobs(response.data)
+        setJobs([...jobs,response.data])
+        
       });
-
-  setTitle("")
-  setDescription("")
-  setCompanyName("")
   });
 
   
@@ -69,12 +66,18 @@ function JobPost(props) {
       </form>
     </div>
   
-      <div className="formResults">
-        <h1> {title} </h1>
-        <h3> {companyName} </h3>
-        <p>{description} </p>
-        
-      </div>
+    {jobs && jobs.map((job => {
+        return (
+          <div>
+            <h2> {job.title}</h2>
+            <h3>{job.companyName}</h3>
+            <p>Job description: {job.description}</p>
+            
+            <hr />
+          </div>
+        );
+      }))
+      }
 
     </div>
     
