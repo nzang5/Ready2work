@@ -1,6 +1,7 @@
 import React from "react";
 import Axios from 'axios';
 import { useState, useEffect } from "react";
+import Searchbar from "../components/Searchbar";
 
 
 const options = {
@@ -19,6 +20,7 @@ function JobSearch(){
     const [ jobs, setJobs ] = useState([]);
     const [ loading, setLoading ] = useState(true);
     
+    
     useEffect(() => {
       Axios.request(options)
       .then((response) => {
@@ -35,9 +37,10 @@ if(loading === true){
 }
         return(
             <div>
-            <h1>List of jobs</h1>
+            <h1 className="findjobs">Find jobs</h1>
             <br></br>
-
+            <Searchbar/>
+             
                 {jobs.map((job => {
         return (
           <div>

@@ -31,7 +31,7 @@ function JobPost() {
     <div>
       <h3>List of Jobs</h3>
  
-      return (
+      
     <div className="JobPostPage">
     
       <h1>Post your job</h1>
@@ -60,11 +60,11 @@ function JobPost() {
           value={companyName}
           onChange={handleCompanyName}
         />
-        <button type="submit">Send</button>
+        <button type="submit">Post</button>
       </form>
      
     </div>
-  )
+  
       
     </div>
   );

@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import { useContext } from "react"; 
 import { AuthContext } from "../context/auth.context";
 
-function Navbar(){
 
+function Navbar(){
+        // eslint-disable-next-line
     const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
     return(
@@ -18,6 +19,8 @@ function Navbar(){
                  <Link className='link' to="/jobpost">
                     Create a Job
                 </Link>
+
+                
 
             {isLoggedIn && (
           <>
