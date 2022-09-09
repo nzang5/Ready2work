@@ -4,8 +4,9 @@ import { useContext } from "react";
 import { AuthContext } from "../context/auth.context";
 import logo from "./Ready work (1)-CutOut.png"
 
-function Navbar(){
 
+function Navbar(){
+        // eslint-disable-next-line
     const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
     return(
@@ -19,6 +20,7 @@ function Navbar(){
                 <Link className='link' to="/">
                      Home
                  </Link>
+                
 
             {isLoggedIn && (
           <>

@@ -3,17 +3,15 @@ import axios from "axios";
 import { useState } from "react";
 
  
-function JobPost() {
-  const [jobs, setJobs] = useState([]);
+function JobPost(props) {
+  const [setJobs] = useState([]);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [companyName, setCompanyName] = useState("");
   const API = "http://localhost:5005/jobs/create";
 
   const handleTitle = e => setTitle(e.target.value);
- 
   const handleDescription = e => setDescription(e.target.value);
- 
   const handleCompanyName = e => setCompanyName(e.target.value);
 
   const handleJobSubmit = ((e) => {
@@ -25,11 +23,20 @@ function JobPost() {
         console.log('response.data', response.data);
         setJobs(response.data)
       });
-    
+
+  setTitle("")
+  setDescription("")
+  setCompanyName("")
   });
 
+  
+
+  
   return (
     <div>
+      <h3>List of Jobs</h3>
+ 
+      
     <div className="JobPostPage">
     
       <h1>Post your job</h1>
@@ -58,14 +65,19 @@ function JobPost() {
           value={companyName}
           onChange={handleCompanyName}
         />
-        <button type="submit">Send</button>
+        <button type="submit">Post</button>
       </form>
-     
     </div>
-    <div>
-      
+  
+      <div className="formResults">
+        <h1> {title} </h1>
+        <h3> {companyName} </h3>
+        <p>{description} </p>
+        
+      </div>
+
     </div>
-    </div>
+    
 
   );
 }
