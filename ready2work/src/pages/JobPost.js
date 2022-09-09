@@ -3,16 +3,14 @@ import axios from "axios";
 import { useState } from "react";
 
  
-function JobPost() {
+function JobPost(props) {
   const [setJobs] = useState([]);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [companyName, setCompanyName] = useState("");
 
   const handleTitle = e => setTitle(e.target.value);
- 
   const handleDescription = e => setDescription(e.target.value);
- 
   const handleCompanyName = e => setCompanyName(e.target.value);
 
   const handleJobSubmit = ((e) => {
@@ -24,9 +22,15 @@ function JobPost() {
         console.log('response.data', response.data);
         setJobs(response.data)
       });
-    
+
+  setTitle("")
+  setDescription("")
+  setCompanyName("")
   });
 
+  
+
+  
   return (
     <div>
       <h3>List of Jobs</h3>
@@ -62,9 +66,16 @@ function JobPost() {
         />
         <button type="submit">Post</button>
       </form>
-     
     </div>
   
+      <div className="formResults">
+        <h1> {title} </h1>
+        <h3> {companyName} </h3>
+        <p>{description} </p>
+        
+
+      </div>
+
       
     </div>
   );
