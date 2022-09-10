@@ -38,7 +38,7 @@ function JobSearch(){
     }, []);
     
 if(loading === true){
-  return <p>Loading...</p>
+  return <h2 className="loading">Loading...</h2>
 }
 
 

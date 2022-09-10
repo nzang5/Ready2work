@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useContext } from "react"; 
 import { AuthContext } from "../context/auth.context";
-import logo from "./Ready work (1)-CutOut.png"
-import BasicModal from './LoginModal'
+import logo from "./logoSimple-CutOut.png"
+import BasicModal from './LoginModal';
 
 
 function Navbar(){
