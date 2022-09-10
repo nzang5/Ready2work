@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import { Routes, Route } from 'react-router-dom';
 import Frontpage from './pages/Frontpage';
-import Login from './pages/login';
+import SignIn from './pages/Login';
 import Signup from './pages/signup';
 import JobSearch from './pages/JobSearch';
 import JobPost from './pages/JobPost';
@@ -20,10 +20,10 @@ function App() {
       <Routes>
           <Route path="/" element={<Frontpage />} />
           <Route path="/jobsearch" element={<JobSearch />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<SignIn />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/jobpost" element={<JobPost />} />
-      </Routes>
+    </Routes>
 
     </div>
   );

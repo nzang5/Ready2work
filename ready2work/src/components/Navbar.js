@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useContext } from "react"; 
 import { AuthContext } from "../context/auth.context";
 import logo from "./Ready work (1)-CutOut.png"
+import BasicModal from './LoginModal'
 
 
 function Navbar(){
@@ -20,6 +21,10 @@ function Navbar(){
                 <Link className='link' to="/">
                      Home
                  </Link>
+
+                 
+
+
                 
 
             {isLoggedIn && (
@@ -27,6 +32,7 @@ function Navbar(){
                 <Link className='link' to="/jobsearch">Job Search page</Link>
 
                 <p> <Link className='link' to="jobpost"> Post a Job </Link> </p>
+
              
                 <Link className='link' to="/"><button className='LogOutBtn' onClick={logOutUser}>Logout</button></Link>
                 {/*<h2> Welcome back {user && user.name} !!😃</h2>*/}
@@ -35,7 +41,9 @@ function Navbar(){
       
             {!isLoggedIn && (
         <>    
-           <p> <Link className='link' to="login"> Login </Link> </p>
+           <p> <BasicModal/> </p>
+
+           
             
            <p> <Link className='link' to="signup"> Sign-up </Link> </p>
             

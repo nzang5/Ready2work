@@ -2,7 +2,7 @@ import React from "react";
 import Axios from 'axios';
 import { useState, useEffect } from "react";
 import Searchbar from "../components/Searchbar";
-
+import Container from '@mui/material/Container';
 
 const options = {
   method: 'GET',
@@ -40,26 +40,31 @@ function JobSearch(){
 if(loading === true){
   return <p>Loading...</p>
 }
+
+
+
         return(
             <div>
             <h1 className="findjobs">Find jobs</h1>
             <br></br>
             <Searchbar/>
-             
+                      
                 {jobs.map((job => {
         return (
+          
           <div>
-            <h2> {job.title}</h2>
+          <Container maxWidth="md">
+            <h2>{job.title}</h2>
             <h3>{job.company_name}</h3>
             <p> Location: {job.location}</p>
              <a href={job.url}>Apply Here</a>
-            <p>Job description: {job.description}</p>
-            
-            <hr />
+            <p>Job description: {job.description}</p>  
+          </Container>       
           </div>
-        );
+
+                );
       }))
-      }
+                }
 
      
 
