@@ -10,7 +10,7 @@ body{
   box-sizing: border-box;
   padding-right: 50px;
   padding-left: 50px;
-  background-color: rgb(6, 73, 73);
+  background-color: #06114F;
   height:10vh;
 }
 .elementsNav{
@@ -25,8 +25,10 @@ body{
   font-size: 20px;
 }
 .link:hover{
-  box-shadow: 0px 1px 0px 0px white;
+  text-decoration: underline;
+  transform: scale(1.1);
   font-weight: bold;
+  color:#5ec5d4;
 }
 
 .LogOutBtn{
@@ -47,33 +49,37 @@ body{
 
 }
 .frontPage{
-  background-image: url("./components/annie-spratt-dWYU3i-mqEo-unsplash.jpg");
+  background-image: url("./components/backgroundpicture.jpg");
   background-size: cover;
   height: 90vh;
   display: flex;
-  align-items: center;
+  justify-content: flex-end;
 }
 .frontElements{
-margin: 0 auto;
-width: 50%;
-display: flex;
-align-items: left;
-flex-direction: column;
-height: 70%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 70%;
 }
 /*SearchBar Front Page*/
 
 .bar.barFront{
-width:100%;
-height: 50px;
-border-radius:0px ;
-display: flex;
-justify-content: space-between;
-background-color: white;
+  width:90%;
+  height: 40px;
+  border-radius:0px ;
+  display: flex;
+  justify-content: space-between;
+  background-color:  #06114F;
+  margin-left:0px;
+}
+.searchbar.searchFront {
+  
+  margin-top:4px;
+  height: 30px;
 }
 .textFront{
   color: white;
-  text-shadow:4px 4px #030302;
+  /*text-shadow:4px 4px #030302;*/
 }
 .h1{
   font-size: 50px;
@@ -85,11 +91,15 @@ background-color: white;
   /*Input*/
   
 .searchBtn{
+  margin-top: 4px;
   width: 20%;
-  border: 0px;
+  height: 80%;
+  border: 1px solid white;
+  border-radius: 5px;
   font-size: 20px;
-  background-color: #cebe52;
-  color: rgb(255, 255, 255);
+  background:linear-gradient(#98ced6,#5ec4d4fa,#5ec4d475);
+  color: black;
+  margin-right:1px;
 }
 
 
