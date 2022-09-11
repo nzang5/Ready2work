@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import Searchbar from "../components/Searchbar";
 import Container from '@mui/material/Container';
 
+import { Default } from 'react-awesome-spinners'
+
 const options = {
   method: 'GET',
   url: 'https://arbeitnow-free-job-board.p.rapidapi.com/api/job-board-api',
@@ -38,11 +40,12 @@ function JobSearch(){
     }, []);
     
 if(loading === true){
-  return <h2 className="loading">Loading...</h2>
+   return (
+   <div className="spinnerDiv">
+   <Default />
+   </div>
+   )
 }
-
-
-
         return(
             <div>
             <h1 className="findjobs">Find jobs</h1>

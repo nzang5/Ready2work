@@ -130,9 +130,10 @@ background-color: white;
 
 
 /*loading */
-
-.loading{
-  text-align: center;
-  padding-top: 240px;
-
+.spinnerDiv{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
