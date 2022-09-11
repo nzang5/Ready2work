@@ -3,6 +3,7 @@ import Axios from 'axios';
 import { useState, useEffect } from "react";
 import Searchbar from "../components/Searchbar";
 import Container from '@mui/material/Container';
+import { Link } from "react-router-dom";
 
 const options = {
   method: 'GET',
@@ -49,13 +50,13 @@ if(loading === true){
             <br></br>
             <Searchbar/>
                       
-                {jobs.map((job => {
+                {jobs.map((job, index) => {
         return (
           
           <div>
           <Container maxWidth="md">
-            <h2>{job.title}</h2>
-            <h3>{job.company_name}</h3>
+          <Link to={`/jobpost/edit/${job._id}`}> <h2>{job.title}</h2></Link>
+            <h3 key={index}>{job.company_name}</h3>
             <p> Location: {job.location}</p>
              <a href={job.url}>Apply Here</a>
             <p>Job description: {job.description}</p>  
@@ -63,7 +64,7 @@ if(loading === true){
           </div>
 
                 );
-      }))
+      })
                 }
 
      
@@ -74,3 +75,6 @@ if(loading === true){
 }
 
 export default JobSearch;
+
+
+

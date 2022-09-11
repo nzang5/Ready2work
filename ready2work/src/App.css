@@ -6,11 +6,11 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 3px solid rgb(255, 252, 252);
+  border-bottom: 2px solid rgb(255, 252, 252);
   box-sizing: border-box;
   padding-right: 50px;
   padding-left: 50px;
-  background-color: rgb(6, 73, 73);
+  background-color: rgb(76, 99, 99);
   height:10vh;
 }
 .elementsNav{
@@ -40,14 +40,12 @@ body{
   text-align: left;
 }
 .logo{
-  width: 140px;
+  width: 170px;
 }
 /*Front Page*/
-.picFront{
 
-}
 .frontPage{
-  background-image: url("./components/annie-spratt-dWYU3i-mqEo-unsplash.jpg");
+  background-image: url("./components/annie-spratt-dWYU3i-mqEo-unsplash\ \(1\).jpg");
   background-size: cover;
   height: 90vh;
   display: flex;
@@ -88,7 +86,7 @@ background-color: white;
   width: 20%;
   border: 0px;
   font-size: 20px;
-  background-color: #cebe52;
+  background-color: #c8c192;
   color: rgb(255, 255, 255);
 }
 
