@@ -1,5 +1,5 @@
 import React from "react";
-import pic from "../components/annie-spratt-dWYU3i-mqEo-unsplash (1).jpg";
+import pic from "../components/logoSimple-CutOut.png";
 import { useContext } from "react"; 
 import { AuthContext } from "../context/auth.context";
 
