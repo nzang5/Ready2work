@@ -12,11 +12,11 @@ function Frontpage(){
         <div className="frontPage">
         <div className="frontElements">
         
-            <h1 className="h1 textFront">Ready to work?</h1>
-            <h2 className="h2 textFront">Find the right job</h2>
+            <h1 className="h1 textFront">Looking for a job?</h1>
+            <h2 className="h2 textFront">Find the right one for you:</h2>
             <div class="bar barFront">  
                 <input class="searchbar searchFront" type="text" title="Search" placeholder="  Search for jobs in your area..."/>
-                <button className="searchBtn">Search</button>   
+                <button className="searchBtn" onClick="./signup">Search</button>   
             </div>
             </div>
             

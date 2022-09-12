@@ -8,6 +8,8 @@ function JobPost(props) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [companyName, setCompanyName] = useState("");
+
+  
   const API = "http://localhost:5005/jobs/create";
 
   const handleTitle = e => setTitle(e.target.value);
