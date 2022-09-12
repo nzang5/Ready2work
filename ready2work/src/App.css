@@ -6,7 +6,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid rgb(255, 252, 252);
+  border-bottom: 1px solid rgb(255, 252, 252);
   box-sizing: border-box;
   padding-right: 50px;
   padding-left: 50px;
