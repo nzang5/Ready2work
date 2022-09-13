@@ -35,7 +35,7 @@ function Navbar(){
 
                 <p> <JobPostmodal /></p>
 
-             
+                <Link className='link' to="/about">About</Link>
                 <Link className='link' to="/"><button className='LogOutBtn' onClick={logOutUser}>Logout</button></Link>
                 {/*<h2> Welcome back {user && user.name} !!😃</h2>*/}
          </>    
@@ -44,9 +44,6 @@ function Navbar(){
             {!isLoggedIn && (
         <>    
            <p> <BasicModal/> </p>
-
-           
-            
            <p> <SignupModal /> </p>
             
             </>

@@ -221,3 +221,54 @@ a:hover:after{
   margin-top: 100px;
   font-size: 40px;
 }
+
+/*About*/
+.aboutMainDiv{
+background-color: #ffffffac;
+width: 100vw;
+height: 90vh;
+display: flex;
+justify-content: space-evenly;
+color: black;
+align-items: center;
+}
+.infoDiv{
+width: 30%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+background-color: rgba(66, 97, 170, 0.43);
+max-height:80vh;
+min-height: 50vh;
+border-radius: 10px;
+padding-top: 50px;
+padding-bottom: 20px;
+border: #06114F 5px solid ;
+box-shadow:  5px 10px 8px #252527;
+}
+.aboutTextDiv{
+  border: 2px solid grey;
+  border-radius: 20px;
+  height: 40%;
+  width: 100%;
+  text-align: center;
+  
+}
+.lorenaPic{
+  width: 200px;
+  border-radius: 50%;
+}
+
+.descriptioncontainer {
+  background: white;
+  color:black;
+  max-width:70%;
+  word-wrap: break-word;
+  box-shadow:  5px 10px 8px #282829;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+  border: #06114F 1px solid ;
+}

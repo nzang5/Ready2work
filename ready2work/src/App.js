@@ -8,7 +8,7 @@ import JobSearch from './pages/JobSearch';
 import JobPost from './pages/JobPost';
 import EditJobPost from "./pages/EditJobPost";
 import SinglePost from './pages/SinglePost';
-
+import About from './pages/About';
 
 
 function App() {
@@ -27,6 +27,7 @@ function App() {
           <Route path="/jobpost" element={<JobPost />} />
           <Route path="/jobpost/singlepost" element={<SinglePost />} />
           <Route path="/jobpost/edit/:jobId" element={ <EditJobPost /> } />
+          <Route path="/about" element={<About />} />
     </Routes>
 
     </div>
