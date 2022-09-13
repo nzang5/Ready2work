@@ -1,17 +1,14 @@
 import React from "react";
 
 
-function Searchbar(){
 
+function Searchbar({mySearch, setMySearch}){
     return(
-        <div>
-          
-   
-    
+  <div>
    <div class="bar">
-     <input class="searchbar" type="text" title="Search" placeholder="  Search for jobs in your area..."/>
+     <input value={mySearch} className="searchbar" type="text" title="Search" placeholder="  Search for jobs in your area..." onChange= {(e)=>{ setMySearch(e.target.value)} } />
      <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png"> 
-     <img class="voice" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png" title="Search by Voice" alt="blah"/>  
+     <img className="voice" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png" title="Search by Voice" alt="blah"/>  
      </a>
    </div>
 
