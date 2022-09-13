@@ -19,7 +19,7 @@ import { AuthContext } from '../context/auth.context';
 import axios from "axios";
 
 
-const API_URL = "http://localhost:5005";
+const API_URL = process.env.REACT_APP_API_URL||"http://localhost:5005" ;
 
 const theme = createTheme();
 
