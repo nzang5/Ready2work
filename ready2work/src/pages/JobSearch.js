@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Container from '@mui/material/Container';
 import { Link } from "react-router-dom";
 import { Default } from 'react-awesome-spinners'
+import Searchbar
 
 const options = {
   method: 'GET',
@@ -20,17 +21,26 @@ function JobSearch(){
     
     const [ jobs, setJobs ] = useState([]);
     const [ loading, setLoading ] = useState(true);
-   
-
     
+    const [mySearch, setMySearch] = useState("");
+  /*const updateSearchList = (e) => {
+    console.log("value", e.target.value)
+    console.log("jooobs", jobs)
+   /* const jobsCopy = [...jobs]
+    console.log("jooobs", jobs)
+    const inputSearch = mySearch.toLowerCase();
+    const filteredJob = jobsCopy.filter(job => job.title.includes(inputSearch))
+    console.log("****JOB****", filteredJob)
+    setJobs(filteredJob)*/
+   
     useEffect(() => {
       async function getAllJobs(){
-        const regex = /(<([^>]+)>)/ig;
         try{
         let apiData = await Axios.request(options)
         let dbData = await Axios.get("http://localhost:5005/jobs/jobsList")
-        console.log("db data", dbData )
+        
         let allData = [...dbData.data, ...apiData.data.data]
+        console.log("allData", allData)
         setJobs(allData)
         setLoading(false)}
        catch(err){console.log(err)}
@@ -54,9 +64,14 @@ if(loading === true){
             <div>
             <h1 className="findjobs">Find jobs</h1>
             <br></br>
-            
-                      
-                {jobs.map((job, index) => {
+            <Searchbar mySearch={mySearch} setMySearch={setMySearch}/>
+                  
+                {jobs && jobs.filter(element=>{
+                  return(element.title.toLowerCase().includes(mySearch.toLowerCase()) || element.description.toLowerCase().includes(mySearch.toLowerCase()))
+                })
+                
+
+                .map((job, index) => {
         return (
           
           <div>
@@ -65,7 +80,7 @@ if(loading === true){
             <h3 key={index}>{job.company_name}</h3>
             <p> Location: {job.location}</p>
              <a href={job.url}>Apply Here</a>
-            <p>Job description: {job.description}</p>  
+            <p>Job description: {job.description.replace(/<[^>]*>/g, '')}</p>  
           </Container>       
           </div>
 

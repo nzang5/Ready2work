@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useReducer } from "react";
 import { useParams, useNavigate } from "react-router-dom";  
 import axios from "axios";
  
@@ -10,7 +10,8 @@ function EditJobPost(props) {
   const [companyName, setCompanyName] = useState("");
   
   const { jobId } = useParams();
-  const navigate = useNavigate();  
+  const navigate = useNavigate();
+  
  
   useEffect(() => {
     axios
@@ -85,6 +86,7 @@ function EditJobPost(props) {
       </form>
       
       <button onClick={deleteJob}>Delete Job post</button>
+      
     </div>
   );
 }
