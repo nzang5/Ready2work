@@ -2,7 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
-import SignIn from '../pages/Login';
+import JobPost from '../pages/JobPost';
 
 const style = {
   position: 'absolute',
@@ -22,8 +22,8 @@ const style = {
   const handleClose = () => setOpen(false);
 
   return (
-    <div className='link'>
-      <Button onClick={handleOpen}>Login</Button>
+    <div>
+      <Button onClick={handleOpen}>Post a job</Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -31,7 +31,7 @@ const style = {
       >
         <Box sx={style}>
           
-            <SignIn />
+            <JobPost />
          
         </Box>
       </Modal>

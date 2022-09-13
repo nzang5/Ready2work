@@ -1,10 +1,8 @@
 import React from "react";
 import Axios from 'axios';
 import { useState, useEffect } from "react";
-import Searchbar from "../components/Searchbar";
 import Container from '@mui/material/Container';
 import { Link } from "react-router-dom";
-
 import { Default } from 'react-awesome-spinners'
 
 const options = {
@@ -22,10 +20,12 @@ function JobSearch(){
     
     const [ jobs, setJobs ] = useState([]);
     const [ loading, setLoading ] = useState(true);
-    
+   
+
     
     useEffect(() => {
       async function getAllJobs(){
+        const regex = /(<([^>]+)>)/ig;
         try{
         let apiData = await Axios.request(options)
         let dbData = await Axios.get("http://localhost:5005/jobs/jobsList")
@@ -38,7 +38,10 @@ function JobSearch(){
       getAllJobs()
       
 
-    }, []);
+    }, [])
+    
+   
+    ;
     
 if(loading === true){
    return (
@@ -51,14 +54,14 @@ if(loading === true){
             <div>
             <h1 className="findjobs">Find jobs</h1>
             <br></br>
-            <Searchbar/>
+            
                       
                 {jobs.map((job, index) => {
         return (
           
           <div>
           <Container maxWidth="md">
-          <Link to={`/jobpost/edit/${job._id}`}> <h2>{job.title}</h2></Link>
+          <Link to={`/jobpost/singlepost`}> <h2>{job.title}</h2></Link>
             <h3 key={index}>{job.company_name}</h3>
             <p> Location: {job.location}</p>
              <a href={job.url}>Apply Here</a>

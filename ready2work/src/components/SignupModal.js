@@ -2,7 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
-import SignIn from '../pages/Login';
+import Signup from '../pages/signup';
 
 const style = {
   position: 'absolute',
@@ -16,14 +16,14 @@ const style = {
   p: 4,
 };
 
- function BasicModal() {
+ function SignupModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   return (
     <div className='link'>
-      <Button onClick={handleOpen}>Login</Button>
+      <Button onClick={handleOpen}>Signup</Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -31,7 +31,7 @@ const style = {
       >
         <Box sx={style}>
           
-            <SignIn />
+            <Signup />
          
         </Box>
       </Modal>
@@ -40,4 +40,4 @@ const style = {
 }
 
     
-export default BasicModal;
+export default SignupModal;

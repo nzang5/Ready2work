@@ -7,6 +7,7 @@ import Signup from './pages/signup';
 import JobSearch from './pages/JobSearch';
 import JobPost from './pages/JobPost';
 import EditJobPost from "./pages/EditJobPost";
+import SinglePost from './pages/SinglePost';
 
 
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/login" element={<SignIn />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/jobpost" element={<JobPost />} />
+          <Route path="/jobpost/singlepost" element={<SinglePost />} />
           <Route path="/jobpost/edit/:jobId" element={ <EditJobPost /> } />
     </Routes>
 
