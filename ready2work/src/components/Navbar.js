@@ -4,6 +4,8 @@ import { useContext } from "react";
 import { AuthContext } from "../context/auth.context";
 import logo from "./logoSimple-CutOut.png"
 import BasicModal from './LoginModal';
+import SignupModal from './SignupModal';
+import JobPostmodal from './JobPostmodal'
 
 
 function Navbar(){
@@ -31,7 +33,7 @@ function Navbar(){
           <>
                 <Link className='link' to="/jobsearch">Job Search page</Link>
 
-                <p> <Link className='link' to="jobpost"> Post a Job </Link> </p>
+                <p> <JobPostmodal /></p>
 
              
                 <Link className='link' to="/"><button className='LogOutBtn' onClick={logOutUser}>Logout</button></Link>
@@ -45,7 +47,7 @@ function Navbar(){
 
            
             
-           <p> <Link className='link' to="signup"> Sign-up </Link> </p>
+           <p> <SignupModal /> </p>
             
             </>
       )}

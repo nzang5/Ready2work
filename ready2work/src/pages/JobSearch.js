@@ -1,11 +1,10 @@
 import React from "react";
 import Axios from 'axios';
 import { useState, useEffect } from "react";
-import Searchbar from "../components/Searchbar";
 import Container from '@mui/material/Container';
 import { Link } from "react-router-dom";
-
 import { Default } from 'react-awesome-spinners'
+import Searchbar from "../components/Searchbar";
 
 const options = {
   method: 'GET',
@@ -49,7 +48,10 @@ function JobSearch(){
       getAllJobs()
       
 
-    }, []);
+    }, [])
+    
+   
+    ;
     
 if(loading === true){
    return (
