@@ -6,7 +6,7 @@ import axios from "axios";
 import Googlebutton from '../components/Googlebutton'
 
 
-const API_URL = "https://dark-erin-panther-garb.cyclic.app" ;
+const API_URL = process.env.REACT_APP_API_URL||"https://dark-erin-panther-garb.cyclic.app" ;
 
 
 
