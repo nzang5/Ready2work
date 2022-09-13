@@ -15,6 +15,7 @@ const About = () => {
             <p>
                 adasdasdasdasdasda
                 asdasdasdasadasdasdas
+                testtesttest
             </p>
             <p>adasdasdasdasdasdaasdasdas
             
