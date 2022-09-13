@@ -72,13 +72,15 @@ if(loading === true){
                 .map((job, index) => {
         return (
           
-          <div>
-          <Container maxWidth="md">
-          <Link to={`/jobpost/edit/${job._id}`}> <h2>{job.title}</h2></Link>
+          <div className="jobSearchMainDiv">
+          <Container className="jobSearchContainer" maxWidth="md">
+          <Link className="titleJob" to={`/jobpost/edit/${job._id}`}> <h2 >{job.title}</h2></Link>
             <h3 key={index}>{job.company_name}</h3>
-            <p> Location: {job.location}</p>
-             <a href={job.url}>Apply Here</a>
-            <p>Job description: {job.description.replace(/<[^>]*>/g, '')}</p>  
+            <p>Location: {job.location}</p>
+             <br/>
+            <label>Job Description:</label>
+            <p>{job.description.replace(/<[^>]*>/g, '')}</p>
+            <a href={job.url}>Apply Here</a>  
           </Container>       
           </div>
 
