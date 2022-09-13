@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Container from '@mui/material/Container';
 import { Link } from "react-router-dom";
 import { Default } from 'react-awesome-spinners'
-import Searchbar
+import Searchbar from "../components/Searchbar";
 
 const options = {
   method: 'GET',

@@ -1,4 +1,5 @@
-// import React from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 // import Axios from "axios";
 // import { useParams, useNavigate  } from "react-router-dom";
 // import { useState, useEffect } from "react";
@@ -6,7 +7,7 @@
 // const API_URL = "http://localhost:5005";
 
 
-// function SinglePost(){
+function SinglePost(){
  
 //     const [title, setTitle] = useState("");
 //   const [description, setDescription] = useState("");
@@ -18,33 +19,36 @@
 
 
 
-//     useEffect(() => {
-//     Axios
-//     .get(`${API_URL}/jobs/jobslist/${jobId}`)
-//     .then((response) => {
-//         const oneJob = response.data;
-//         setTitle(oneJob.title);
-//         setDescription(oneJob.description);
-//         setCompanyName(oneJob.companyName)
-//       })
-//       .catch((error) => console.log(error));
-//     },[jobId])
+    // useEffect(() => {
+    // Axios
+    // .get(`${API_URL}/jobs/jobslist/${jobId}`)
+    // .then((response) => {
+    //     const oneJob = response.data;
+    //     setTitle(oneJob.title);
+    //     setDescription(oneJob.description);
+    //     setCompanyName(oneJob.companyName)
+    //   })
+    //   .catch((error) => console.log(error));
+    // },[jobId])
 
 
    
 
     
 
-//     return(
-// <div>
+    return(
+<div>
 
-// <h1>SinglePost</h1>
+<h1>SinglePost</h1>
+
+
+<button><Link to={`/jobpost/edit/:jobId`}>Edit/Delete Post </Link></button>
      
        
-//       </div>
+      </div>
     
     
-//          )
-// }
+         )
+}
 
-// export default SinglePost;
+export default SinglePost;
