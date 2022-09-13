@@ -1,6 +1,7 @@
 
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
  
 function JobPost(props) {
@@ -11,6 +12,7 @@ function JobPost(props) {
 
   
   const API = "http://localhost:5005/jobs/create";
+  const Navigate = useNavigate();
 
   const handleTitle = e => setTitle(e.target.value);
   const handleDescription = e => setDescription(e.target.value);
@@ -24,7 +26,7 @@ function JobPost(props) {
       .then((response) => {
         console.log('response.data', response.data);
         setJobs([...jobs,response.data])
-        
+        Navigate(`/jobsearch`);
       });
   });
 
@@ -32,42 +34,45 @@ function JobPost(props) {
 
   
   return (
-    <div>
-      <h3>List of Jobs</h3>
- 
-      
-    <div className="JobPostPage">
+    <div className="">
+      <h1 className="h1Form">Publish your job offer online</h1>
+    <div className="postMainDiv">
     
-      <h1>Post your job</h1>
-
+    <div className="jobPostPage">
       <form onSubmit={handleJobSubmit}>
-        <label>Title:</label>
-        <input 
+        <label className="labelPostForm">Title:</label>
+        <br/>
+        <input className="jobPostForm"
           type="text"
           name="title"
           value={title}
           onChange={handleTitle}
         />
-
-        <label>Description:</label>
-        <input
+        <br/>
+        <label className="labelPostForm">Description:</label>
+        <br/>
+        <input className="jobPostForm"
           type="text"
           name="description"
           value={description}
           onChange={handleDescription}
         />
-
-        <label>Company Name:</label>
-        <input
+        <br/>
+        <label className="labelPostForm">Company Name:</label>
+        <br/>
+        <input className="jobPostForm"
           type="text"
           name="companyName"
           value={companyName}
           onChange={handleCompanyName}
         />
-        <button type="submit">Post</button>
+        <br/>
+        <div className="divPostFormBtn">
+        <button className="jobPostBtn" type="submit">Submit</button>
+        </div>
       </form>
     </div>
-  
+    </div> 
     {jobs && jobs.map((job => {
         return (
           <div>
