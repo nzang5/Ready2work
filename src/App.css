@@ -1,6 +1,8 @@
 *{
   font-family: 'Open Sans', sans-serif;
+  
 }
+
 /*NavBar*/
 .NavDiv{
   display: flex;
@@ -188,10 +190,14 @@
 }
 
 /*Jobs Post Page*/
+.jobPostContainer{
+  background-image:linear-gradient(to top, #F5F7FA,#B8C6DB,#95a9c6,#aa6bbd) ;
+  height: 90vh;
+}
 .postMainDiv{
  display: flex;
  justify-content: center;
- height: 100vh;
+ height: 90vh;
 }
 .jobPostPage{
   border: 2px solid grey;
@@ -202,29 +208,43 @@
   align-items: center;
   text-align:justify;
   border-radius: 20px;
+  background-color: rgba(66, 97, 170, 0.43);
+  border: #06114F 5px solid;
+  box-shadow: 5px 10px 8px #252527;
 }
 .jobPostForm{
   width: 100%;
   margin-bottom: 20px;
 }
+.jobPostForm.description{
+  height: 80px;
+}
 .labelPostForm{
   font-weight: bold;
 }
 .divPostFormBtn{
-  background-color: #06114F;
+  background-color: white;
+  border-radius: 10px;
+}
+.formDivPost{
+  width: 40%;
 }
 .jobPostBtn{
-  width: 100%;
-  height: 50px;
-  border:0px;
-  background-color: #06114F;
+  background-image:linear-gradient(#06114f57,#06114fc7,#06114F) ;
   color: white;
-  font-size: 20px;
+  border-radius: 10px;
+  height: 40px;
+  width: 100%;
+  
+}
+.jobPostBtn:hover {
+  background-color: #06114F;
 }
 .h1Form{
   text-align: center;
-  margin-bottom: 100px;
-  margin-top: 100px;
+  margin:0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   font-size: 40px;
 }
 
@@ -237,6 +257,7 @@ display: flex;
 justify-content: space-evenly;
 color: black;
 align-items: center;
+background-image:linear-gradient(to top, #F5F7FA,#B8C6DB,#95a9c6,#aa6bbd) ;  
 }
 .infoDiv{
 width: 30%;
@@ -279,28 +300,73 @@ box-shadow:  5px 10px 8px #252527;
   border: #06114F 1px solid ;
 }
 /*Profile Page*/
+.profileContainer{
+  background-image: linear-gradient(to bottom, #F5F7FA,#95a9c6,#aa6bbd);
+  padding-bottom: 30px;
+}
+
 .profileMainDiv{
-  height: 90vh;
-display: flex;
-justify-content:flex-start;
-align-items: center;
-flex-direction: column;
+  margin:0 auto;
+  min-height: 50vh;
+  width: 40%;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid black;
+  background-color: rgba(66, 97, 170, 0.43);
+  border: #06114F 5px solid ;
+  box-shadow:  5px 10px 8px #252527;
+  padding-bottom: 20px;
+  border-radius: 10px;
 }
 .profileFromDiv{
-width: 30%;
+width: 50%;
+
+}
+.displayedText{
+  border: #06114F 2px solid ; 
+  margin-top: 10px;
+  border-radius:5px; 
+  box-shadow:  5px 10px 8px #282829;
 }
 .profileDescription{
-  height: 200px;
+  min-height: 150px;
   width: 100%;
   margin-top: 20%;
+  word-wrap: break-word;
 }
 .ProfileUpdateBtn{
-  background-color: #06114F;
+  background-image:linear-gradient(#06114f57,#06114fc7,#06114F) ;
   color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  height: 40px;
 }
+.ProfileUpdateBtn:hover{
+  background-color: #06114fc7;
+}
+
 .h2ProfilePage{
   text-align: center;
- margin-top: 50px;
+  margin:0px;
+  padding-top: 40px;
+  padding-bottom: 40px;
  font-size: 40px;
 
+}
+.textProfile{
+  background: white;
+  color:black;
+  max-width:100%;
+  word-wrap: break-word;
+  margin:0px;
+  padding:10px;
+  
+}
+.profilePic{
+  margin-top:5px;
+  width: 200px;
+  border-radius: 50%;
 }

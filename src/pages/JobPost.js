@@ -34,28 +34,19 @@ function JobPost(props) {
 
   
   return (
-    <div className="">
+    <div className="jobPostContainer">
       <h1 className="h1Form">Publish your job offer online</h1>
     <div className="postMainDiv">
     
     <div className="jobPostPage">
-      <form onSubmit={handleJobSubmit}>
-        <label className="labelPostForm">Title:</label>
+      <form className="formDivPost" onSubmit={handleJobSubmit}>
+        <label className="labelPostForm">Job position:</label>
         <br/>
         <input className="jobPostForm"
           type="text"
           name="title"
           value={title}
           onChange={handleTitle}
-        />
-        <br/>
-        <label className="labelPostForm">Description:</label>
-        <br/>
-        <input className="jobPostForm"
-          type="text"
-          name="description"
-          value={description}
-          onChange={handleDescription}
         />
         <br/>
         <label className="labelPostForm">Company Name:</label>
@@ -65,6 +56,15 @@ function JobPost(props) {
           name="companyName"
           value={companyName}
           onChange={handleCompanyName}
+        />
+        <br/>
+        <label className="labelPostForm">Description:</label>
+        <br/>
+        <textarea className="jobPostForm description"
+          type="text"
+          name="description"
+          value={description}
+          onChange={handleDescription}
         />
         <br/>
         <div className="divPostFormBtn">

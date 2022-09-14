@@ -3,6 +3,7 @@ import { AuthContext } from "../context/auth.context";
 import { useContext } from "react"; 
 import { useState } from "react";
 import axios from "axios";
+import foto from "../components/Screenshot 2022-09-13 at 20.47.43.png";
 
 
 
@@ -38,16 +39,17 @@ function Profile(){
       .catch(err=>{console.log(err)})
     })
   return (
-    <div>
+    <div className="profileContainer">
     <h2 className='h2ProfilePage'> Welcome back {user && user.name} !!😃</h2>
     
     <div className='profileMainDiv'>
-    
+    <img alt='Nash' className='profilePic' src={foto}></img>
     <div className='profileFromDiv'>
-    
-    <p>{user && user.description}</p>
+    <div className="displayedText">
+    <p className='textProfile'>{user && user.description}</p>
+    </div>
     <form onSubmit={handleSubmit}>
-    <input className="profileDescription"
+    <textarea className="profileDescription"
           type="text"
           name="description"
           value={description}
