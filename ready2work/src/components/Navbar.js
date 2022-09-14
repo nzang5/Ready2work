@@ -5,7 +5,7 @@ import { AuthContext } from "../context/auth.context";
 import logo from "./logoSimple-CutOut.png"
 import BasicModal from './LoginModal';
 import SignupModal from './SignupModal';
-import JobPostmodal from './JobPostmodal'
+
 
 
 function Navbar(){
@@ -33,8 +33,8 @@ function Navbar(){
           <>
                 <Link className='link' to="/jobsearch">Job Search page</Link>
 
-                <p> <JobPostmodal /></p>
-
+              
+               <Link className='link' to="/jobpost">Post a Job</Link>
                 <Link className='link' to="/about">About</Link>
                 <Link className='link' to="/"><button className='LogOutBtn' onClick={logOutUser}>Logout</button></Link>
                 {/*<h2> Welcome back {user && user.name} !!😃</h2>*/}
