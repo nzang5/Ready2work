@@ -34,8 +34,8 @@ function Navbar(){
       
             {!isLoggedIn && (
         <>    
-           <p> <BasicModal/> </p>
-           <p> <SignupModal /> </p>
+          <BasicModal/>
+          <SignupModal />
             
             </>
       )}

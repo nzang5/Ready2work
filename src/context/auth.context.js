@@ -15,10 +15,10 @@ function AuthProviderWrapper(props) {
   const storeToken = (token) => {       //  <==  ADD
     localStorage.setItem('authToken', token);
   }
-  
+  const storedToken = localStorage.getItem('authToken');
   const authenticateUser = () => {           //  <==  ADD  
     // Get the stored token from the localStorage
-    const storedToken = localStorage.getItem('authToken');
+    
     
     // If the token exists in the localStorage
     if (storedToken) {
@@ -30,6 +30,7 @@ function AuthProviderWrapper(props) {
       .then((response) => {
         // If the server verifies that JWT token is valid  
         const user = response.data;
+        console.log("hiii R.data", response.data)
        // Update state variables        
         setIsLoggedIn(true);
         setIsLoading(false);
@@ -74,9 +75,11 @@ function AuthProviderWrapper(props) {
         isLoggedIn,
         isLoading,
         user,
+        setUser,
         storeToken,
         authenticateUser,
-        logOutUser    
+        logOutUser,
+        storedToken,
       }}
     >
       {props.children}

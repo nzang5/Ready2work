@@ -47,7 +47,7 @@ const theme = createTheme();
      
         axios.post(`${API_URL}/auth/login`, requestBody)
           .then((response) => {
-          
+          console.log("dataa**", response.data)
             console.log('JWT token', response.data.authToken );
     
             storeToken(response.data.authToken);
@@ -56,6 +56,7 @@ const theme = createTheme();
             navigate('/jobsearch');                                
           })
           .catch((error) => {
+            console.log("erroooor",error)
             const errorDescription = error.response.data.message;
             setErrorMessage(errorDescription);
           })
