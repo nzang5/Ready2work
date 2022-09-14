@@ -20,24 +20,15 @@ function Navbar(){
         </div>
         <div className='elementsNav'>
 
-                <Link className='link' to="/">
-                     Home
-                 </Link>
-
-                 
-
-
-                
 
             {isLoggedIn && (
           <>
                 <Link className='link' to="/jobsearch">Job Search page</Link>
-
-              
-               <Link className='link' to="/jobpost">Post a Job</Link>
+                <Link className='link' to="/profile">Profile</Link>
+                <Link className='link' to="/jobpost">Post a Job</Link>
                 <Link className='link' to="/about">About</Link>
                 <Link className='link' to="/"><button className='LogOutBtn' onClick={logOutUser}>Logout</button></Link>
-                {/*<h2> Welcome back {user && user.name} !!😃</h2>*/}
+                
          </>    
       )}
       
