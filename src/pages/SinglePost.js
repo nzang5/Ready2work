@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // import { useParams, useNavigate  } from "react-router-dom";
 // import { useState, useEffect } from "react";
 
-// const API_URL = process.env.REACT_APP_API_URL||"https://dark-erin-panther-garb.cyclic.app" ;
+// const API_URL = process.env.REACT_APP_API_URL||"https://localhost:5005" ;
 
 
 function SinglePost(){

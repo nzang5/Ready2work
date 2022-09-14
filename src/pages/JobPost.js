@@ -11,7 +11,7 @@ function JobPost(props) {
   const [companyName, setCompanyName] = useState("");
 
   
-  const API = "https://dark-erin-panther-garb.cyclic.app/jobs/create";
+  const API = "https://localhost:5005/jobs/create";
   const Navigate = useNavigate();
 
   const handleTitle = e => setTitle(e.target.value);
