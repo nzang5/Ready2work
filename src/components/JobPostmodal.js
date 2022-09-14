@@ -1,4 +1,4 @@
-import * as React from 'react';
+/*import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
@@ -40,4 +40,4 @@ const style = {
 }
 
     
-export default BasicModal;
+export default BasicModal;*/

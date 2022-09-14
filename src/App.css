@@ -48,9 +48,9 @@ a:hover:after{
 
 .LogOutBtn{
   text-decoration: none;
-  background-color: rgb(6, 73, 73);
+  background-color: rgb(244, 245, 175);
   border: 0px;
-  color: white;
+  color: rgb(5, 5, 5);
   font-size: 20px;
 }
 .logoDiv{
@@ -164,9 +164,7 @@ a:hover:after{
 }
 
 /*Job Search Page*/
-.jobSearchMainDiv{
- 
-}
+
 .jobSearchContainer{
   border: 2px solid rgb(173, 168, 168);
   border-radius: 20px;

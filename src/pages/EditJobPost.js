@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";  
 import axios from "axios";
  
-const API_URL = process.env.REACT_APP_API_URL||"https://localhost:5005" ;
+const API_URL = process.env.REACT_APP_API_URL ||"https://dark-erin-panther-garb.cyclic.app" ;
 
  
 function EditJobPost(props) {
