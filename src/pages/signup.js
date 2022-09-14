@@ -15,7 +15,7 @@ import Box from '@mui/material/Box';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
-const API_URL = process.env.REACT_APP_API_URL||"https://localhost:5005" ;
+const API_URL = process.env.REACT_APP_API_URL||"https://dark-erin-panther-garb.cyclic.app" ;
 
 const theme = createTheme();
 
