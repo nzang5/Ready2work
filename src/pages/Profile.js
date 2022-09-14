@@ -7,10 +7,12 @@ import axios from "axios";
 
 
 function Profile(){
-    const { user, setUser, storedToken } = useContext(AuthContext);
+    const { user, setUser } = useContext(AuthContext);
     const [description, setDescription] = useState("");
     const handleDescription = e => setDescription(e.target.value);
     useEffect(()=>{
+      const storedToken = localStorage.getItem('authToken');
+
         axios.get(
             `${process.env.REACT_APP_API_URL}/auth/profile`,
             { headers: { Authorization: `Bearer ${storedToken}`} }
@@ -20,7 +22,7 @@ function Profile(){
             console.log("foundUser", foundUser.data)
         })
         .catch(err=>{console.log(err)})
-    },[setUser,storedToken])
+    },[setUser])
     
     const handleSubmit = ((e) => {
         e.preventDefault();

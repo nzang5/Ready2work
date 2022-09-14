@@ -13,11 +13,8 @@ function Frontpage(){
         <div className="frontElements">
         
             <h1 className="h1 textFront">Looking for a job?</h1>
-            <h2 className="h2 textFront">Find the right one for you:</h2>
-            <div className="bar barFront">  
-                <input className="searchbar searchFront" type="text" title="Search" placeholder="  Search for jobs in your area..."/>
-                  
-            </div>
+            <h2 className="h2 textFront">Find the right one for you</h2>
+         
             </div>
             
             <div alt="front pic" className="picFront" style={{backgroundImage: `url(${pic})`}} ></div>

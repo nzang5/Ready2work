@@ -15,6 +15,16 @@ function Navbar(){
     return(
         <nav>
         <div className='NavDiv'>
+        <div className="elementsNav">
+        {isLoggedIn && (
+          <>
+                <Link className='link' to="/jobsearch">Job Search page</Link>
+                <Link className='link' to="/jobpost">Post a Job</Link>
+               
+                
+         </>    
+      )}
+      </div>
         <div className='logoDiv'>
         <img className='logo' alt="logo" src={logo}></img>
         </div>
@@ -23,11 +33,11 @@ function Navbar(){
 
             {isLoggedIn && (
           <>
-                <Link className='link' to="/jobsearch">Job Search page</Link>
+                
                 <Link className='link' to="/profile">Profile</Link>
-                <Link className='link' to="/jobpost">Post a Job</Link>
+               
                 <Link className='link' to="/about">About</Link>
-                <Link className='link' to="/"><button className='LogOutBtn' onClick={logOutUser}>Logout</button></Link>
+                <Link to="/"><button className='LogOutBtn' onClick={logOutUser}>Logout</button></Link>
                 
          </>    
       )}

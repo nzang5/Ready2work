@@ -19,6 +19,7 @@
   justify-content: space-evenly;
   width:40%
 }
+
 .link{
   text-decoration: none;
   color: white;
@@ -27,15 +28,15 @@
 .link:after {
   content:"";
   position: absolute;
-  background-color: red;
-  height: 3px;
+  background-color: #5ec5d4;
+  height: 1px;
   width: 0;
   left:0;
-  bottom:-10px;
-  transition: 0.3s;
+  bottom:0px;
+  transition: 0.5s;
 }
 
-a:hover:after{
+.link:hover:after{
   width:100%;
 }
 
@@ -55,6 +56,10 @@ a:hover:after{
   font-weight: bold;
   border-radius: 5px;
 }
+.LogOutBtn:hover{
+  transform: scale(1.1);
+}
+
 .logoDiv{
   text-align: left;
 }
@@ -69,6 +74,7 @@ a:hover:after{
   height: 90vh;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 .frontElements{
   width: 50%;

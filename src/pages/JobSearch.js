@@ -37,7 +37,7 @@ function JobSearch(){
       async function getAllJobs(){
         try{
         let apiData = await Axios.request(options)
-        let dbData = await Axios.get("https://localhost:5005/jobs/jobsList")
+        let dbData = await Axios.get("https://dark-erin-panther-garb.cyclic.app/jobs/jobsList")
         
         let allData = [...dbData.data, ...apiData.data.data]
         console.log("allData", allData)
