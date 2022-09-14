@@ -36,7 +36,7 @@ const theme = createTheme();
     const handlePassword = (e) => setPassword(e.target.value);
   
 //1. Prevents the form to do a GET request.
-//2. Posts the Email & Password to the server (http://localhost:5005) 
+//2. Posts the Email & Password to the server (https://dark-erin-panther-garb.cyclic.app) 
 //3. Generate a JWT Token
 //4. Navigate the user to Jobsearch page
    
