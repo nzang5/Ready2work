@@ -52,6 +52,8 @@ a:hover:after{
   border: 0px;
   color: rgb(5, 5, 5);
   font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
 }
 .logoDiv{
   text-align: left;
@@ -269,4 +271,30 @@ box-shadow:  5px 10px 8px #252527;
   padding-right: 5px;
   border-radius: 5px;
   border: #06114F 1px solid ;
+}
+/*Profile Page*/
+.profileMainDiv{
+  height: 90vh;
+display: flex;
+justify-content:flex-start;
+align-items: center;
+flex-direction: column;
+}
+.profileFromDiv{
+width: 30%;
+}
+.profileDescription{
+  height: 200px;
+  width: 100%;
+  margin-top: 20%;
+}
+.ProfileUpdateBtn{
+  background-color: #06114F;
+  color: white;
+}
+.h2ProfilePage{
+  text-align: center;
+ margin-top: 50px;
+ font-size: 40px;
+
 }

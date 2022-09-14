@@ -20,7 +20,7 @@ function Profile(){
             console.log("foundUser", foundUser.data)
         })
         .catch(err=>{console.log(err)})
-    },[])
+    },[setUser,storedToken])
     
     const handleSubmit = ((e) => {
         e.preventDefault();
@@ -37,7 +37,12 @@ function Profile(){
     })
   return (
     <div>
-    <h2> Welcome back {user && user.name} !!😃</h2>
+    <h2 className='h2ProfilePage'> Welcome back {user && user.name} !!😃</h2>
+    
+    <div className='profileMainDiv'>
+    
+    <div className='profileFromDiv'>
+    
     <p>{user && user.description}</p>
     <form onSubmit={handleSubmit}>
     <input className="profileDescription"
@@ -46,14 +51,10 @@ function Profile(){
           value={description}
           onChange={handleDescription}
         />
-
-
-   <br/>
-  <label>Image:</label>
-   <input type="file" name="name" />
-   <br/>
    <button className="ProfileUpdateBtn" type="submit">Update Profile</button>
   </form>
+  </div>
+    </div>
     </div>
 )}
 
