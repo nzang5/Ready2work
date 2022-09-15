@@ -136,7 +136,7 @@
   margin:0 auto;
   width:575px;
   border-radius:30px;
-  border:1px solid #dcdcdc;
+  border:2px solid #dcdcdc;
 }
 .bar:hover{
   box-shadow: 1px 1px 8px 1px #dcdcdc;
@@ -151,7 +151,7 @@
   width:500px;
   font-size:16px;
   outline: none;
-  
+  border-radius:30px;
 }
 .voice{
   height:20px;
@@ -178,7 +178,8 @@
 /*Job Search Page*/
 
 .jobSearchContainer{
-  border: 2px solid rgb(173, 168, 168);
+  border: #06114F 5px solid ;
+  background-color: rgb(66, 97, 170, 0.43);
   border-radius: 20px;
   margin-top: 50px;
   padding-bottom: 20px;
@@ -194,7 +195,7 @@
 
 /*Jobs Post Page*/
 .jobPostContainer{
-  background-image:linear-gradient(to top, #F5F7FA,#B8C6DB,#95a9c6,#aa6bbd) ;
+  background-image:linear-gradient(to top, #F5F7FA,#667ea2,rgb(161,84,240)) ;
   height: 90vh;
 }
 .postMainDiv{
@@ -214,6 +215,7 @@
   background-color: rgba(66, 97, 170, 0.43);
   border: #06114F 5px solid;
   box-shadow: 5px 10px 8px #252527;
+  margin-top: 3%;
 }
 .jobPostForm{
   width: 100%;
@@ -260,7 +262,7 @@ display: flex;
 justify-content: space-evenly;
 color: black;
 align-items: center;
-background-image:linear-gradient(to top, #F5F7FA,#B8C6DB,#95a9c6,#aa6bbd) ;  
+background-image:linear-gradient(to top, #F5F7FA,#667ea2,rgb(161,84,240)) ;  
 }
 .infoDiv{
 width: 30%;
@@ -297,10 +299,16 @@ box-shadow:  5px 10px 8px #252527;
   word-wrap: break-word;
   box-shadow:  5px 10px 8px #282829;
   margin-bottom: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   border-radius: 5px;
   border: #06114F 1px solid ;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.githubIcon{
+  width: 30px;
+  margin-right: 20px;
 }
 /*Profile Page*/
 .profileContainer{
