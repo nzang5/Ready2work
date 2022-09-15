@@ -13,8 +13,9 @@ const About = () => {
         </h1>
         <div className="descriptioncontainer">
             <p>
+            
                 adasdasdasdasdasda
-                asdasdasdasadasdasdas
+                asdasdasrtdhsfdghsdasadasdasdas
                 testtesttest
             </p>
             <p>adasdasdasdasdasdaasdasdas

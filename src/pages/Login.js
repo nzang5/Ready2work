@@ -54,7 +54,6 @@ const theme = createTheme();
             setIsLoggedIn(true);
             setIsLoading(false);
             setUser(response.data);  
-            {/*authenticateUser();*/}
             navigate('/jobsearch');                                
           })
           .catch((error) => {
