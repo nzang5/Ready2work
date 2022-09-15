@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { useState } from "react";
 import axios from "axios";
 import foto from "../components/Screenshot 2022-09-13 at 20.47.43.png";
-import { Link } from 'react-router-dom';
+
 
 
 
