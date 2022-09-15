@@ -35,9 +35,9 @@ function JobPost(props) {
   
   return (
     <div className="jobPostContainer">
-      <h1 className="h1Form">Publish your job offer online</h1>
+      
     <div className="postMainDiv">
-    
+    <h1 className="h1Form">Publish your job offer online</h1>
     <div className="jobPostPage">
       <form className="formDivPost" onSubmit={handleJobSubmit}>
         <label className="labelPostForm">Job position:</label>

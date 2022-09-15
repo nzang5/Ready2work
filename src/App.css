@@ -1,6 +1,6 @@
 *{
   font-family: 'Open Sans', sans-serif;
-  
+  box-sizing: border-box;
 }
 
 /*NavBar*/
@@ -200,13 +200,13 @@
 }
 .postMainDiv{
  display: flex;
- justify-content: center;
  height: 90vh;
+ flex-direction: column;
+ align-items: center;
 }
 .jobPostPage{
   border: 2px solid grey;
   width: 30%;
-  height: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -230,9 +230,11 @@
 .divPostFormBtn{
   background-color: white;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 .formDivPost{
   width: 40%;
+  margin-top: 10px;
 }
 .jobPostBtn{
   background-image:linear-gradient(#06114f57,#06114fc7,#06114F) ;
@@ -257,7 +259,8 @@
 .aboutMainDiv{
 background-color: #ffffffac;
 width: 100vw;
-height: 90vh;
+min-height: 90vh;
+height: auto;
 display: flex;
 justify-content: space-evenly;
 color: black;
@@ -314,6 +317,8 @@ box-shadow:  5px 10px 8px #252527;
 .profileContainer{
   background-image: linear-gradient(to top, #F5F7FA,#667ea2,rgb(161,84,240));
   padding-bottom: 30px;
+  min-height: 90vh;
+  height: auto;
 }
 
 .profileMainDiv{
@@ -340,11 +345,11 @@ width: 50%;
   margin-top: 10px;
   border-radius:5px; 
   box-shadow:  5px 10px 8px #282829;
+  margin-bottom: 40px;
 }
 .profileDescription{
   min-height: 150px;
   width: 100%;
-  margin-top: 20%;
   word-wrap: break-word;
 }
 .ProfileUpdateBtn{
@@ -381,3 +386,12 @@ width: 50%;
   width: 200px;
   border-radius: 50%;
 }
+.editBtnProfile{
+  border-radius: 10px;
+  background-image:linear-gradient(#06114f57,#06114fc7,#06114F) ;
+  color:rgb(244, 245, 175);
+}
+.editBtnProfile:hover{
+  background-color:#06114F;
+}
+
