@@ -19,7 +19,7 @@ import { AuthContext } from '../context/auth.context';
 import axios from "axios";
 
 
-const API_URL = process.env.REACT_APP_DEPLOYMENT_URL||"https://dark-erin-panther-garb.cyclic.app" ;
+const API_URL = process.env.REACT_APP_API_URL||"https://dark-erin-panther-garb.cyclic.app" ;
 
 const theme = createTheme();
 
@@ -30,8 +30,8 @@ const theme = createTheme();
     const [errorMessage, setErrorMessage] = useState(undefined);
     
     const navigate = useNavigate();
-    const { storeToken, authenticateUser } = useContext(AuthContext);
-  
+    const { storeToken, setIsLoggedIn, setIsLoading,setUser } = useContext(AuthContext);
+   
     const handleEmail = (e) => setEmail(e.target.value);
     const handlePassword = (e) => setPassword(e.target.value);
   
@@ -51,13 +51,15 @@ const theme = createTheme();
             console.log('JWT token', response.data.authToken );
     
             storeToken(response.data.authToken);
-          
-            authenticateUser();
+            setIsLoggedIn(true);
+            setIsLoading(false);
+            setUser(response.data);  
+            {/*authenticateUser();*/}
             navigate('/jobsearch');                                
           })
           .catch((error) => {
-            console.log("erroooor",error)
-            const errorDescription = error.response.data.message;
+            const errorDescription = error;
+            console.log(error)
             setErrorMessage(errorDescription);
           })
           
@@ -71,7 +73,7 @@ const theme = createTheme();
     // 3. The button to submit the form above + inline CSS
 
     <ThemeProvider theme={theme}>
-      <div component="main" maxWidth="xs">
+      <div component="main" maxwidth="xs">
         <CssBaseline />
         <Box
           sx={{

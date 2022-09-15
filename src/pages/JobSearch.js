@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { Default } from 'react-awesome-spinners'
 import Searchbar from "../components/Searchbar";
 
+
+
 const options = {
   method: 'GET',
   url: 'https://arbeitnow-free-job-board.p.rapidapi.com/api/job-board-api',
@@ -32,12 +34,12 @@ function JobSearch(){
     const filteredJob = jobsCopy.filter(job => job.title.includes(inputSearch))
     console.log("****JOB****", filteredJob)
     setJobs(filteredJob)*/
-   
+    const API_URL = process.env.REACT_APP_API_URL||"https://dark-erin-panther-garb.cyclic.app" ;
     useEffect(() => {
       async function getAllJobs(){
         try{
         let apiData = await Axios.request(options)
-        let dbData = await Axios.get("https://dark-erin-panther-garb.cyclic.app/jobs/jobsList")
+        let dbData = await Axios.get(`${API_URL}/jobs/jobsList`)
         
         let allData = [...dbData.data, ...apiData.data.data]
         console.log("allData", allData)
@@ -48,7 +50,7 @@ function JobSearch(){
       getAllJobs()
       
 
-    }, [])
+    })
     
    
     ;
@@ -61,7 +63,7 @@ if(loading === true){
    )
 }
         return(
-            <div>
+            <div className="jobSearchBackground">
             <h1 className="findjobs">Find jobs</h1>
             <br></br>
             <Searchbar mySearch={mySearch} setMySearch={setMySearch}/>
@@ -72,10 +74,11 @@ if(loading === true){
                 
 
                 .map((job, index) => {
+                  
         return (
           
           <div className="jobSearchMainDiv">
-          <Container className="jobSearchContainer" maxWidth="md">
+          <Container className="jobSearchContainer" maxwidth="md">
           <Link className="titleJob" to={`/jobpost/edit/${job._id}`}> <h2 >{job.title}</h2></Link>
             <h3 key={index}>{job.company_name}</h3>
             <p>Location: {job.location}</p>

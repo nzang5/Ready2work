@@ -77,12 +77,14 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  
 }
 .frontElements{
   width: 50%;
   display: flex;
   flex-direction: column;
   height: 70%;
+  
 }
 /*SearchBar Front Page*/
 
@@ -182,6 +184,7 @@
   padding-bottom: 20px;
   text-justify: auto;
   text-align:justify;
+  
 }
 .titleJob{
   color: #06114F;
@@ -301,7 +304,7 @@ box-shadow:  5px 10px 8px #252527;
 }
 /*Profile Page*/
 .profileContainer{
-  background-image: linear-gradient(to bottom, #F5F7FA,#95a9c6,#aa6bbd);
+  background-image: linear-gradient(to top, #F5F7FA,#667ea2,rgb(161,84,240));
   padding-bottom: 30px;
 }
 

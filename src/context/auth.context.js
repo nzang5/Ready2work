@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-const API_URL = process.env.REACT_APP_DEPLOYMENT_URL||"https://dark-erin-panther-garb.cyclic.app" ;
+const API_URL = process.env.REACT_APP_API_URL||"https://dark-erin-panther-garb.cyclic.app" ;
 
 const AuthContext = React.createContext();
 
@@ -71,6 +71,8 @@ function AuthProviderWrapper(props) {
   return (                                                   
     <AuthContext.Provider 
       value={{ 
+        setIsLoggedIn,
+        setIsLoading,
         isLoggedIn,
         isLoading,
         user,

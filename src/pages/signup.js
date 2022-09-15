@@ -15,7 +15,7 @@ import Box from '@mui/material/Box';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
-const API_URL = process.env.REACT_APP_DEPLOYMENT_URL||"https://dark-erin-panther-garb.cyclic.app" ;
+const API_URL = process.env.REACT_APP_API_URL||"https://dark-erin-panther-garb.cyclic.app" ;
 
 const theme = createTheme();
 
@@ -61,7 +61,7 @@ function Signup(props) {
   
   return (
     <ThemeProvider theme={theme}>
-      <div component="main" maxWidth="xs">
+      <div component="main" maxwidth="xs">
         <CssBaseline />
         <Box
           sx={{
