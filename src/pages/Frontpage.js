@@ -21,7 +21,13 @@ function Frontpage(){
             
           
         </div>
+        )
+        }
+        {isLoggedIn && (
+            <div className="frontPage">
+            </div>
         )}
+       
         </>
     )
 }
