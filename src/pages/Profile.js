@@ -3,7 +3,7 @@ import { AuthContext } from "../context/auth.context";
 import { useContext } from "react"; 
 import { useState } from "react";
 import axios from "axios";
-import foto from "../components/Screenshot 2022-09-13 at 20.47.43.png";
+import photo from "../components/julian.jpg";
 
 
 
@@ -50,7 +50,7 @@ function Profile(){
     <h2 className='h2ProfilePage'> Welcome back {user && user.name} !!😃</h2>
     
     <div className='profileMainDiv'>
-    <img alt='Nash' className='profilePic' src={foto}></img>
+    <img alt='Nash' className='profilePic' src={photo}></img>
     <div className='profileFromDiv'>
     <div className="displayedText">
     <p className='textProfile'>{user && user.description}</p>

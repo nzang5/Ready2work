@@ -58,36 +58,47 @@ function EditJobPost(props) {
 
   return (
     <div className="EditJobPost">
-      <h3>Edit the Job post</h3>
- 
-      <form onSubmit={handleFormSubmit}>
-        <label>Title:</label>
-        <input
+      <h3 className="h3EditJob">Edit the Job post</h3>
+      <div className="editJobDiv">
+      <form className="formEditJob"  onSubmit={handleFormSubmit}>
+        <label className="labelPostForm" >Title:</label>
+        <br/>
+        <input className="inputEditJobForm"
           type="text"
           name="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-        
-        <label>Description:</label>
+        <br/>
+        <label className="labelPostForm">Description:</label>
+        <br/>
         <textarea
+        className="inputEditJobForm"
           name="description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
+        <br/>
 
-        <label>Company Name:</label>
+        <label className="labelPostForm">Company Name:</label>
+        <br/>
         <textarea
+        className="inputEditJobForm"
           name="companyName"
           value={companyName}
           onChange={(e) => setCompanyName(e.target.value)}
         />
- 
-        <input type="submit" value="Submit" />
+        <br/>
+        <div className="btnsFormEdit">
+        <input
+         className="editBtnProfile" type="submit" value="Submit" />
+         
+         <button className="editBtnProfile deleteEditJob" onClick={deleteJob}>Delete Job post</button>
+         </div>
       </form>
       
-      <button onClick={deleteJob}>Delete Job post</button>
       
+      </div>
     </div>
   );
 }

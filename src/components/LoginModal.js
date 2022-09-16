@@ -23,7 +23,7 @@ const style = {
 
   return (
     <div className='link'>
-      <Button onClick={handleOpen}>Login</Button>
+      <Button sx={{color: 'white'}} onClick={handleOpen}>Login</Button>
       <Modal
         open={open}
         onClose={handleClose}
